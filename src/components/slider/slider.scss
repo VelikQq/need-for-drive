@@ -1,0 +1,89 @@
+@import "../../assets/styles/variables.scss";
+
+.slider {
+  width: 47%;
+  height: 100vh;
+  position: relative;
+
+  &::before {
+    content: "";
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%);
+  }
+  &__content {
+    background: linear-gradient(180deg, rgba(0, 0, 0, 0) 0%, #000000 100%),
+      url(../../assets/img/bg_slider_0.jpg);
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 0 96px;
+
+    &__title {
+      font-weight: 500;
+      font-size: 40px;
+      line-height: 47px;
+      color: $light-gray;
+      margin-bottom: 10px;
+    }
+    &__text {
+      font-weight: 300;
+      font-size: 24px;
+      line-height: 90%;
+      color: $light-gray;
+      margin-bottom: 32px;
+    }
+    &__button {
+      width: 164px;
+      background: linear-gradient(90deg, #13493f 0%, #0c7b1b 100%);
+      border-radius: 4px;
+      &.blue {
+        background: linear-gradient(90deg, #132949 0%, #0c7b67 100%);
+        &:hover,
+        &:focus {
+          background: linear-gradient(90deg, #081220 2.61%, #074a3e 112.6%);
+        }
+
+        &:active {
+          background: linear-gradient(90deg, #060f1b 2.61%, #053a30 112.6%);
+        }
+      }
+      &.red {
+        background: linear-gradient(90deg, #493013 0%, #7b0c3b 100%);
+        &:hover,
+        &:focus {
+          background: linear-gradient(90deg, #201508 2.61%, #4a0723 112.6%);
+        }
+
+        &:active {
+          background: linear-gradient(90deg, #160e05 2.61%, #38051a 112.6%);
+        }
+      }
+      &.violet {
+        background: linear-gradient(90deg, #281349 0%, #720c7b 100%);
+        &:hover,
+        &:focus {
+          background: linear-gradient(90deg, #120820 2.61%, #45074a 112.6%);
+        }
+        &:active {
+          background: linear-gradient(90deg, #0d0518 2.61%, #300433 112.6%);
+        }
+      }
+    }
+  }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+}
+.slider.disabled {
+  &::before {
+    z-index: 2;
+  }
+}

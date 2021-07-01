@@ -1,0 +1,76 @@
+@import "../../assets/styles/variables.scss";
+
+.content {
+  width: 53%;
+  height: 100vh;
+  background: white;
+  padding: 31px 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &__logo {
+      font-weight: bold;
+      font-size: 30px;
+      line-height: 35px;
+      color: $green;
+      text-decoration: none;
+      pointer-events: none;
+    }
+    &__location {
+      line-height: 16px;
+      color: $dark-gray;
+    }
+    &__location::before {
+      content: url(../../assets/icons/Group.svg);
+      position: relative;
+      right: 5px;
+      top: 5px;
+    }
+  }
+  &__desc {
+    display: flex;
+    flex-direction: column;
+    &__title {
+      font-weight: bold;
+      font-size: 70px;
+      line-height: 66px;
+      margin-bottom: 34px;
+
+      span {
+        color: $green;
+      }
+    }
+    &__text {
+      font-weight: 300;
+      font-size: 26px;
+      line-height: 30px;
+      color: $dark-gray;
+      margin-bottom: 60px;
+    }
+    &__button {
+      width: 250px;
+    }
+  }
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    font-size: 13px;
+    line-height: 15px;
+    color: $black;
+    &__copyright {
+      color: $dark-gray;
+    }
+    &__phone {
+      color: $black;
+    }
+    &__phone:hover {
+      color: $green;
+    }
+  }
+}

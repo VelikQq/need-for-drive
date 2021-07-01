@@ -1,0 +1,58 @@
+@import "../../assets/styles/variables.scss";
+.menu {
+  width: 50.1%;
+  height: 100vh;
+  padding: 64px;
+  display: flex;
+  align-items: center;
+  background: $black;
+  position: absolute;
+  margin-left: 57px;
+  z-index: 3;
+  transition: all 1s;
+  opacity: 1;
+  color: #ffffff;
+  .icon {
+    fill: currentColor;
+  }
+  &.disabled {
+    width: 0;
+    padding: 0;
+    opacity: 0;
+    .menu__content {
+      display: none;
+    }
+  }
+  ul {
+    margin-bottom: 38px;
+  }
+  &__content li {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 37px;
+    margin-bottom: 24px;
+    list-style-type: none;
+    cursor: pointer;
+  }
+
+  &__content__icons a {
+    margin-right: 24px;
+    color: #ffffff;
+
+    &:hover {
+      color: $green;
+      
+    }
+  }
+
+  &__content__icons svg:hover .icon {
+    fill: $green;
+  }
+  &__content__icons a:hover {
+    
+  }
+  &__content li:hover {
+    color: $green;
+    
+  }
+}
